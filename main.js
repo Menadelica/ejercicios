@@ -71,7 +71,7 @@
 //         document.write(`Año ${año}: ${capitalObten.toFixed(2)}<br>`);
 //     }
 // }
-
+//ejercicio 16
 // Escribir un programa que pida al usuario un número entero y muestre por pantalla
 // un triángulo rectángulo como el de más abajo, de altura el número introducido.
 // *
@@ -80,17 +80,19 @@
 // ****
 // *****
 
+
 // let altura = parseInt(prompt("Ingrese un número entero para la altura del triángulo:"));
 
-// if (isNaN(altura) || altura <= 0) {
+//  if (isNaN(altura) || altura <= 0) {
 //     alert("Por favor, ingrese un número entero positivo.");
-// } else {
-//     for (let i = 1; i <= altura; i++) {
-//         let linea = "*".repeat(i); // 
-//         console.log(linea); 
+//  } else {
+//      for (let i = 1; i <= altura; i++) {
+//          let linea = "*".repeat(i); // 
+//        document.write(linea); 
 //         document.write(linea + "<br>");
 //     }
-// }
+//  }
+
 //  ejercicio 17
 //  Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
 
@@ -171,33 +173,32 @@
 // let numero = parseInt(prompt("Ingrese un número entero:"));
 
 // // Verificar si el número es válido
-// if (isNaN(numero)) {
+//  if (isNaN(numero)) {
 //     document.write("Por favor, ingrese un número válido.");
 // } else {
 //     // Variable para determinar si es primo
-//     let esPrimo = true;
+//      let esPrimo = true;
 
-//     // Manejar números menores de 2
-//     if (numero < 2) {
+// //     // Manejar números menores de 2
+//    if (numero < 2) {
 //         esPrimo = false;
-//     } else {
-//         // Revisar divisibilidad
-//         for (let i = 2; i <= Math.sqrt(numero); i++) {
-//             // Si encuentra un divisor
-//             if (numero % i === 0) {
+//          } else {
+//        // Revisar divisibilidad
+//          for (let i = 2; i <= Math.sqrt(numero); i++) {
+//            // Si encuentra un divisor
+//            if (numero % i === 0) {
 //                 esPrimo = false;
-//                 break; // Salir del bucle al encontrar un divisor
-//             }
+//                  break; // Salir del bucle al encontrar un divisor
+//              }
 //         }
 //     }
-
 //     // Mostrar resultado
 //     if (esPrimo) {
-//         document.write(`${numero} es un número primo.`);
-//     } else {
+//       document.write(`${numero} es un número primo.`);
+//      } else {
 //         document.write(`${numero} NO es un número primo.`);
 //     }
-// }
+//  }
 // Este ciclo revisa si el número tiene divisores distintos de 1 y de sí mismo. Veamos cómo funciona y por qué se usa de esta manera:
 
 // 1. Declaración del ciclo
@@ -335,11 +336,35 @@
 //     }
 // }
 
-Ejercicios de Listas
+// Ejercicios de Listas
 
-Ejercicio 24
-Escribir un programa que almacene las asignaturas de un curso (por ejemplo
-Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por
-pantalla.
+// Ejercicio 24
+// Escribir un programa que almacene las asignaturas de un curso (por ejemplo
+// Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por
+// pantalla.
+
+// Ejercicio 24
+// Lista de asignaturas
+// const asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"];
+
+// // Mostrar las asignaturas por pantalla
+// document.write("Asignaturas del curso:");
+// asignaturas.forEach(asignatura => {
+//     document.write(asignatura + "<br>");
+// });
+// Ejercicio 25
+// Escribir un programa que almacene las asignaturas de un curso (por ejemplo
+// Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por
+// pantalla el mensaje Yo estudio <asignatura>, donde <asignatura> es cada una de
+// las asignaturas de la lista.
+
+ const asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"];
+
+ document.write("Asignaturas del curso:");
+ asignaturas.forEach(asignatura => {
+    document.write("yo estudio" + " " + asignatura + "<br>");
+ });
+
+
 
 
