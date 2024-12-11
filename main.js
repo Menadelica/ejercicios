@@ -87,8 +87,8 @@
 //     alert("Por favor, ingrese un número entero positivo.");
 //  } else {
 //      for (let i = 1; i <= altura; i++) {
-//          let linea = "*".repeat(i); // 
-//        document.write(linea); 
+//          let linea = "*".repeat(i); //
+//        document.write(linea);
 //         document.write(linea + "<br>");
 //     }
 //  }
@@ -288,7 +288,7 @@
 // Ejercicio 22
 // Escribir un programa en el que se pregunte al usuario por una frase y una letra, y
 // muestre por pantalla el número de veces que aparece la letra en la frase.
-//intento #1, ERROR 
+//intento #1, ERROR
 // let frase=prompt("ingrese una frase");
 // let letra=prompt("ingrese una letra");
 // let numLetras=0;
@@ -319,7 +319,7 @@
 // let eco=parseInt(prompt("introduzca lo que quiera"));
 // let salir= "si"
 // while(salir==="si"){
-     
+
 //      if(pregunta==="si"){
 //         document.write(eco);
 //      }else{
@@ -358,12 +358,230 @@
 // pantalla el mensaje Yo estudio <asignatura>, donde <asignatura> es cada una de
 // las asignaturas de la lista.
 
- const asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"];
+//  const asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"];
 
- document.write("Asignaturas del curso:");
- asignaturas.forEach(asignatura => {
-    document.write("yo estudio" + " " + asignatura + "<br>");
- });
+//  document.write("Asignaturas del curso:");
+//  asignaturas.forEach(asignatura => {
+//     document.write("yo estudio" + " " + asignatura + "<br>");
+//  });
+
+// Ejercicio 26
+// Escribir un programa que almacene las asignaturas de un curso (por ejemplo
+// Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario
+// la nota que ha sacado en cada asignatura, y después las muestre por pantalla con
+// el mensaje En <asignatura> has sacado <nota> donde <asignatura> es cada una
+// des las asignaturas de la lista y <nota> cada una de las correspondientes notas
+// introducidas por el usuario.
+
+// const asignaturas=["matematicas","fisica","quimica","historia","lengua"];
+
+// let matematicas=parseFloat(prompt("cual es tu nota de matematicas"));
+// let fisica=parseFloat (prompt("cual es tu nota de fisica"))
+// let quimica=parseFloat (prompt("cual es tu nota de quimica"))
+// let lengua=parseFloat (prompt("cual es tu nota de lengua"))
+// let historia=parseFloat (prompt("cual es tu nota de historia"))
+
+// document.write("la nota de matematicas es:"+matematicas,"<br>"+"la nota de fisica es:"+ fisica,"<br>"+"la nota de quimica es:"+ quimica,"<br>"+"la nota de lengua es:" +lengua,"<br>"+ "la nota de historia es:"+historia + "<br>" )
+
+// Ejercicio 27
+// Escribir un programa que pregunte al usuario los números ganadores de la lotería
+// primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor
+// a mayor.
+
+// const numerosGanadores = prompt("Introduce los 6 números ganadores separados por comas:");
+
+// // Convertir la entrada en un array de números y ordenarlos
+// const numerosOrdenados = numerosGanadores.split(",").map(Number).sort((a, b) => a - b);
+
+// // Mostrar los números ordenados en el documento
+// document.write("<h2>Números ganadores de la lotería:</h2>");
+// document.write("<p>" + numerosOrdenados.join(", ") + "</p>");
+
+// Ejercicio 28
+// Escribir un programa que almacene en una lista los números del 1 al 10 y los
+// muestre por pantalla en orden inverso separados por comas.
+
+// const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// // Invertir el orden de los números
+// const numerosInvertidos = numeros.reverse();
+
+// // Mostrar los números en orden inverso separados por comas
+// document.write("<h2>Números en orden inverso:</h2>");
+// document.write("<p>" + numerosInvertidos.join(", ") + "</p>");
+
+// Ejercicio 29
+// Escribir un programa que almacene las asignaturas de un curso (por ejemplo
+// Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario
+// la nota que ha sacado en cada asignatura y elimine de la lista las asignaturas
+// aprobadas. Al final el programa debe mostrar por pantalla las asignaturas que el
+// usuario tiene que repetir.
+
+// Ejercicio 29
+// Lista de asignaturas
+// const asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"];
+
+// // Preguntar al usuario la nota de cada asignatura
+// const asignaturasRepetir = [];
+
+// asignaturas.forEach(asignatura => {
+//     const nota = parseFloat(prompt(`¿Qué nota has sacado en ${asignatura}?`));
+//     if (nota < 3) {
+//         asignaturasRepetir.push(asignatura);
+//     }
+// });
+
+// // Mostrar las asignaturas que el usuario tiene que repetir
+// if (asignaturasRepetir.length > 0) {
+//     document.write("<h2>Asignaturas que tienes que repetir:</h2>");
+//     document.write("<p>" + asignaturasRepetir.join(", ") + "</p>");
+// } else {
+//     document.write("<h2>¡Felicidades! No tienes asignaturas que repetir.</h2>");
+// }
+
+// Ejercicio 30
+// Escribir un programa que almacene el abecedario en una lista, elimine de la lista
+// las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista
+// resultante.
+
+// const abecedario = "abcdefghijklmnopqrstuvwxyz".split("");
+
+// // Filtrar las letras cuya posición no sea múltiplo de 3
+// const resultado = abecedario.filter((_, index) => (index + 1) % 3 !== 0);
+
+// // Mostrar la lista resultante
+// document.write("<h2>Abecedario sin letras en posiciones múltiplos de 3:</h2>");
+// document.write("<p>" + resultado.join(", ") + "</p>");
+
+// Ejercicio 31
+// Escribir un programa que pida al usuario una palabra y muestre por pantalla el
+// número de veces que contiene cada vocal.
+
+// const palabra = prompt("Introduce una palabra:").toLowerCase();
+
+// // Inicializar un objeto para contar las vocales
+// const conteoVocales = { a: 0, e: 0, i: 0, o: 0, u: 0 };
+
+// // Contar las vocales en la palabra
+// for (const letra of palabra) {
+//     if (conteoVocales.hasOwnProperty(letra)) {
+//         conteoVocales[letra]++;
+//     }
+// }
+
+// // Mostrar el resultado
+// document.write("<h2>Conteo de vocales:</h2>");
+// for (const [vocal, cantidad] of Object.entries(conteoVocales)) {
+//     document.write(`<p>${vocal.toUpperCase()}: ${cantidad}</p>`);
+// }
+
+// Ejercicio 32
+// Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46,
+// 22, 80, 65, 8, y muestre por pantalla el menor y el mayor de los precios.
+
+// const precios = [50, 75, 46, 22, 80, 65, 8];
+
+// // Encontrar el menor y el mayor precio
+// const menorPrecio = Math.min(...precios);
+// const mayorPrecio = Math.max(...precios);
+
+// // Mostrar el menor y el mayor precio
+// document.write("<h2>Precios:</h2>");
+// document.write(`<p>Menor precio: ${menorPrecio}</p>`);
+// document.write(`<p>Mayor precio: ${mayorPrecio}</p>`);
+
+// Ejercicio 33
+// Escribir un programa que pregunte por una muestra de números, separados por
+// comas, los guarde en una lista y muestre por pantalla su media y su suma.
+//profundizar en explicacion
+
+// const entrada = prompt("Introduce una muestra de números separados por comas:");
+
+// // Convertir la entrada en una lista de números
+// const numeros = entrada.split(",").map(Number);
+
+// // Calcular la suma y la media
+// const suma = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+// const media = suma / numeros.length;
+
+// // Mostrar la suma y la media
+// document.write("<h2>Resultados:</h2>");
+// document.write(`<p>Suma: ${suma}</p>`);
+// document.write(`<p>Media: ${media}</p>`);
+
+// Ejercicio 34
+// Escribir programa que pida a dos personas ingresar su nombre, edad y color
+// favorito. Y decir cual de los dos es mayor, publicar también la edad, nombre y
+// color favorito del menor.
+
+// const nombre1 = prompt("Persona 1: Ingresa tu nombre:");
+// const edad1 = parseInt(prompt("Persona 1: Ingresa tu edad:"), 10);
+// const color1 = prompt("Persona 1: Ingresa tu color favorito:");
+
+// // Pedir datos de la segunda persona
+// const nombre2 = prompt("Persona 2: Ingresa tu nombre:");
+// const edad2 = parseInt(prompt("Persona 2: Ingresa tu edad:"), 10);
+// const color2 = prompt("Persona 2: Ingresa tu color favorito:");
+
+// // Determinar quién es mayor y quién es menor
+// let mayor, menor;
+
+// if (edad1 > edad2) {
+//     mayor = { nombre: nombre1, edad: edad1, color: color1 };
+//     menor = { nombre: nombre2, edad: edad2, color: color2 };
+// } else {
+//     mayor = { nombre: nombre2, edad: edad2, color: color2 };
+//     menor = { nombre: nombre1, edad: edad1, color: color1 };
+// }
+// document.write("<h2>Resultados:</h2>");
+// document.write(`<p>El mayor es: ${mayor.nombre}, con ${mayor.edad} años.</p>`);
+// document.write(`<p>El menor es: ${menor.nombre}, con ${menor.edad} años y su color favorito es ${menor.color}.</p>`);
+
+// Ejercicio 35
+// Escribir programa que calcule el promedio de tres notas (enteros entre 0 y 10),
+// que muestre el nombre de la persona, su edad, su color favorito y diga si gana o
+// pierde. Promedio menor o igual a 7 pierde
+
+// const nombre = prompt("Ingresa tu nombre:");
+// const edad = parseInt(prompt("Ingresa tu edad:"), 10);
+// const colorFavorito = prompt("Ingresa tu color favorito:");
+
+// // Pedir las tres notas
+// const nota1 = parseInt(prompt("Ingresa la primera nota (entre 0 y 10):"), 10);
+// const nota2 = parseInt(prompt("Ingresa la segunda nota (entre 0 y 10):"), 10);
+// const nota3 = parseInt(prompt("Ingresa la tercera nota (entre 0 y 10):"), 10);
+
+// // Calcular el promedio de las notas
+// const promedio = (nota1 + nota2 + nota3) / 3;
+
+// // Determinar si gana o pierde
+// const resultado = promedio <= 7 ? "pierde" : "gana";
+
+// document.write("<h2>Resultados:</h2>");
+// document.write(`<p>Nombre: ${nombre}</p>`);
+// document.write(`<p>Edad: ${edad}</p>`);
+// document.write(`<p>Color favorito: ${colorFavorito}</p>`);
+// document.write(`<p>Promedio: ${promedio.toFixed(2)}</p>`);
+// document.write(`<p>El resultado es: ${resultado}</p>`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
