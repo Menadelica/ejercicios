@@ -70,26 +70,51 @@
 //     document.write("su tipo impositivo es del 45%")
 // }
 //ejercicio 8
-// let puntuacion=parseFloat(prompt("ingrese su puntuacion"));
-// const nivelAceptable=0.4;
-// const nivelInalcan=0.0;
-// const nivelMeritorio=0.6
-// let cantDinero=2.400;
-// let nivel;
-//  let dinero=0;
-// let puntuacionInvalida;
-
-// if(puntuacion===nivelAceptable){
-//     nivel="aceptable"
+//  let puntuacion=parseFloat(prompt("ingrese su puntuacion"));
+//  const nivelAceptable=4;
+//  const nivelInalcan=0;
+//  const nivelMeritorio=6;
+//  let cantDinero=2.400;
+//  let nivel;
+//   let dinero=0;
+ 
+//  if(puntuacion===nivelAceptable){
+//      nivel="aceptable"
 // }else if(puntuacion===nivelInalcan){
 //     nivel="inalcanzable"
-// }else if(puntuacion=>nivelMeritorio){
-//     nivel="meritorio"
-// }else if(nivel==puntuacionInvalida){
-//     nivel="su puntuacion es invalida"
+//  }else if(puntuacion<=nivelMeritorio){
+//      nivel="meritorio"
+//  }else{
+//      nivel="su puntuacion es invalida"
+//  }
+
+//  dinero=puntuacion*cantDinero;
+//  document.write("tu nivel es:" + nivel + "y recibiras" + " " + dinero+"<br")
+
+// let puntuacion = parseFloat(prompt("Ingrese su puntuación"));
+
+// const nivelAceptable = 4.0;
+// const nivelInalcan = 0.0;
+// const nivelMeritorio = 6.0;
+// const cantDinero = 2400;
+// let nivel;
+// let dinero = 0;
+
+// if (puntuacion > nivelMeritorio || puntuacion < nivelInalcan) {
+//     nivel = "su puntuación es inválida";
+// } else if (puntuacion === nivelMeritorio) {
+//     nivel = "meritorio";
+//     dinero = puntuacion * cantDinero;
+// } else if (puntuacion >= nivelAceptable) {
+//     nivel = "aceptable";
+//     dinero = puntuacion * cantDinero; 
+// } else if (puntuacion === nivelInalcan) {
+//     nivel = "inalcanzable";
+//     dinero = puntuacion * cantDinero;
 // }
-// dinero=puntuacion*cantDinero;
-// document.write("tu nivel es:" + nivel + "y recibiras" + " " + dinero+"<br")
+
+// console.log("Tu nivel es: " + nivel + " y recibirás " + dinero);
+
 
 // Ejercicio 9
 // Escribir un programa para una empresa que tiene salas de juegos para todas las
@@ -98,15 +123,103 @@
 // mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar
 // gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€.
 
-let edadCliente=parseInt(prompt(" ingrese su edad"));
+// let edadCliente=parseInt(prompt(" ingrese su edad"));
 
-if(edadCliente<4){
-    document.write("ingresa gratis")
-}else if(edadCliente>=4 && edadCliente<=18){
-    document.write("debe pagar 5 euros")
-}else if(edadCliente>18){
-    document.write("debe pagar 10 euros")
+// if(edadCliente<4){
+//     document.write("ingresa gratis")
+// }else if(edadCliente>=4 && edadCliente<=18){
+//     document.write("debe pagar 5 euros")
+// }else if(edadCliente>18){
+//     document.write("debe pagar 10 euros")
+// }
+
+// Ejercicio 10
+// La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus
+// clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
+// • Ingredientes vegetarianos: Pimiento y tofu.
+// • Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+// Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no,
+// y en función de su respuesta le muestre un menú con los ingredientes disponibles
+// para que elija. Solo se puede elegir un ingrediente además de la mozzarella y el
+// tomate que están en todas las pizzas. Al final se debe mostrar por pantalla si la
+// pizza elegida es vegetariana o no y todos los ingredientes que lleva.
+
+// Programa para seleccionar ingredientes de una pizza y mostrar el resultado en la página
+
+
+
+// const ingredientesVegetarianos = ["Pimiento", "Tofu"];
+// const ingredientesNoVegetarianos = ["Peperoni", "Jamón", "Salmón"];
+
+// const esVegetariana = prompt("¿Quieres una pizza vegetariana? (Aceptar para Sí, Cancelar para No)");
+
+// let ingredientesDisponibles;
+// if (esVegetariana) {
+//     ingredientesDisponibles = ingredientesVegetarianos;
+//     document.write("Ingredientes vegetarianos disponibles: " + ingredientesVegetarianos.join(", ") );
+// } else {
+//     ingredientesDisponibles = ingredientesNoVegetarianos;
+//     document.write("Ingredientes no vegetarianos disponibles: " + ingredientesNoVegetarianos.join(", ") );
+// }
+
+// const ingredienteSeleccionado = prompt("Escribe el ingrediente que deseas añadir (opciones: " + ingredientesDisponibles.join(", ") + "):");
+
+// const tipoPizza = esVegetariana ? "vegetariana" : "no vegetariana";
+// const ingredientesFinales = ["Mozzarella", "Tomate", ingredienteSeleccionado];
+
+// document.write(`Has elegido una pizza ${tipoPizza} con los siguientes ingredientes: ${ingredientesFinales.join(", ")}.`);
+
+
+
+const ingredientesVegetarianos = ["PIMIENTO", "TOFU"];
+const ingredientesNoVegetarianos = ["PEPERONI", "JAMÓN", "SALMÓN"];
+
+let ingredientesDisponibles;
+let tipoPizza;
+
+
+
+// Función para normalizar texto y eliminar tildes
+function normalizarTexto(texto) {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 }
+
+// Solicitar al usuario si desea pizza vegetariana
+let opcionPizza = normalizarTexto(prompt("¿QUIERES UNA PIZZA VEGETARIANA? ESCRIBE 'SÍ' O 'NO':"));
+//console.log(`OPCIÓN SELECCIONADA: ${opcionPizza}`);
+
+// Validación de opción
+if (opcionPizza === "SÍ" || opcionPizza === "SI") {
+    ingredientesDisponibles = ingredientesVegetarianos;
+    tipoPizza = "VEGETARIANA";
+    //console.log("INGREDIENTES VEGETARIANOS DISPONIBLES: " + ingredientesVegetarianos.join(", ").toUpperCase());
+} else if (opcionPizza === "NO") {
+    ingredientesDisponibles = ingredientesNoVegetarianos;
+    tipoPizza = "NO VEGETARIANA";
+    console.log("INGREDIENTES NO VEGETARIANOS DISPONIBLES: " + ingredientesNoVegetarianos.join(", ").toUpperCase());
+} else {
+    console.log("OPCIÓN NO VÁLIDA. POR FAVOR, RECARGA LA PÁGINA Y ELIGE NUEVAMENTE.");
+    throw new Error("TIPO DE PIZZA NO VÁLIDO");
+}
+
+// Solicitar el ingrediente
+let ingredienteSeleccionado = normalizarTexto(prompt("ESCRIBE EL INGREDIENTE QUE DESEAS AÑADIR (OPCIONES: " + ingredientesDisponibles.join(", ").toUpperCase() + "):"));
+//console.log(`INGREDIENTE SELECCIONADO: ${ingredienteSeleccionado}`);
+
+// Validación del ingrediente seleccionado
+if (ingredientesDisponibles.map(normalizarTexto).includes(ingredienteSeleccionado)) {
+    const ingredientesFinales = ["MOZZARELLA", "TOMATE", ingredienteSeleccionado];
+    console.log(`HAS ELEGIDO UNA PIZZA ${tipoPizza} CON LOS SIGUIENTES INGREDIENTES: ${ingredientesFinales.join(", ").toUpperCase()}.`);
+} else {
+    console.log("EL INGREDIENTE SELECCIONADO NO ESTÁ DISPONIBLE. POR FAVOR, INTENTA DE NUEVO.");
+    console.error("INGREDIENTE INVÁLIDO: " + ingredienteSeleccionado);
+}
+
+
+
+
+
+
 
 
 
