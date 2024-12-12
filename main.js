@@ -1,31 +1,4 @@
-//ejercicio 11
 
-// let palabra=prompt("ingrese una palabra");
-
-// for (let i=1; i<=10; i++){
-//     document.write(i + " " + palabra, "<br>")
-// }
-
-//Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos
-//los años que ha cumplido (desde 1 hasta su edad).
-
-// let edad=parseInt(prompt("ingrese su edad"));
-
-// for (let año=1; año<=edad; año++){
-//     document.write(año,"<br>");
-// }
-// Escribir un programa que pida al usuario un número entero positivo y muestre por
-// pantalla todos los números impares desde 1 hasta ese número separados por
-// comas.
-
-
-// let numero = parseInt(prompt("Escribe un número:"));
-
-// for (let i = 1; i <= numero; i++) {
-//     if (i % 2 !== 0) {
-//         document.write(i + ",");
-//     }
-// }
 
 // Escribir un programa que pida al usuario un número entero positivo y muestre por
 // pantalla la cuenta atrás desde ese número hasta cero separados por comas.
